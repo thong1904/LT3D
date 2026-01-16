@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         input = new PlayerInputActions();
+        DontDestroyOnLoad(gameObject);
     }
 
     
@@ -57,7 +58,7 @@ public class GameManager : MonoBehaviour
 {
     isPaused = true;
     pausePanel.SetActive(true);
-    crosshair.SetActive(false); // 👈 ẨN TÂM
+    crosshair.SetActive(false); 
 
     Time.timeScale = 0f;
 
@@ -73,7 +74,7 @@ public class GameManager : MonoBehaviour
 {
     isPaused = false;
     pausePanel.SetActive(false);
-    crosshair.SetActive(true); // 👈 HIỆN TÂM
+    crosshair.SetActive(true); 
 
     Time.timeScale = 1f;
 
